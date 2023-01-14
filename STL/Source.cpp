@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 #include<array>
 #include<vector>
 #include<list>
@@ -21,7 +21,7 @@ void main()
 	setlocale(LC_ALL, "");
 
 #ifdef STL_ARRAY
-	//array - это контейнер, который хранит данные в виде статического массива.
+	//array - СЌС‚Рѕ РєРѕРЅС‚РµР№РЅРµСЂ, РєРѕС‚РѕСЂС‹Р№ С…СЂР°РЅРёС‚ РґР°РЅРЅС‹Рµ РІ РІРёРґРµ СЃС‚Р°С‚РёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°.
 	const int SIZE = 5;
 	std::array<int, SIZE> arr = { 3,5,8,13,21 };
 	for (int i = 0; i < arr.size(); i++)
@@ -43,7 +43,7 @@ void main()
 #endif MY_EXCEPTION
 
 #ifdef STL_VECTOR
-	//vector - это контейнер, который хранит данные в виде динамического массива.
+	//vector - СЌС‚Рѕ РєРѕРЅС‚РµР№РЅРµСЂ, РєРѕС‚РѕСЂС‹Р№ С…СЂР°РЅРёС‚ РґР°РЅРЅС‹Рµ РІ РІРёРґРµ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР°.
 	std::vector<int> vec = { 0,1,1,2,3,5,8,13,21,34 };
 	print(vec);
 	vec.push_back(123);
@@ -85,21 +85,21 @@ void main()
 	int value;
 	do
 	{
-		cout << "Введите индекс добавляемого элемента: "; cin >> index;
+		cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РґРѕР±Р°РІР»СЏРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р°: "; cin >> index;
 		if (index >= vec.size())cout << "Out of range" << endl;
 	} while (index >= vec.size());
-	cout << "Введите количество добавляемых значений: "; cin >> number;
-	cout << "Введите значение добавляемого элемента: "; cin >> value;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРѕР±Р°РІР»СЏРµРјС‹С… Р·РЅР°С‡РµРЅРёР№: "; cin >> number;
+	cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґРѕР±Р°РІР»СЏРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р°: "; cin >> value;
 
 	vec.insert(vec.begin() + index, number, value);
 	print(vec);
 
 	do
 	{
-		cout << "Введите индекс удаляемого элемента: "; cin >> index;
+		cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ СѓРґР°Р»СЏРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р°: "; cin >> index;
 		if (index >= vec.size())cout << "Out of range" << endl;
 	} while (index >= vec.size());
-	cout << "Введите количество удаляемых значений: "; cin >> number;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СѓРґР°Р»СЏРµРјС‹С… Р·РЅР°С‡РµРЅРёР№: "; cin >> number;
 
 	vec.erase(vec.begin() + index, vec.begin() + index + number);
 	for (int i : vec)cout << i << tab; cout << endl;
@@ -109,8 +109,8 @@ void main()
 	for (int i : list)cout << i << tab; cout << endl;
 	int value;
 	int index;
-	cout << "Введите индекс добавляемого элемента: "; cin >> index;
-	cout << "Введите значение добавляемого элемента: "; cin >> value;
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РґРѕР±Р°РІР»СЏРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р°: "; cin >> index;
+	cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґРѕР±Р°РІР»СЏРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р°: "; cin >> value;
 	std::list<int>::iterator position = list.begin();
 	//for (int i = 0; i < index; i++)++position;
 	std::advance(position, index);
